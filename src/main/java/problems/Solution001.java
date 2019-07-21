@@ -1,10 +1,12 @@
+package problems;
+
 import java.util.*;
 
 /**
  * @author Chen Runwen
  * @version 1.0 2018/3/4
  */
-public class Solution1 {
+public class Solution001 {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         int[] result = new int[2];
@@ -23,7 +25,7 @@ public class Solution1 {
     public static void main(String[] args) {
         int[] nums = {3, 2, 4};
         int target = 6;
-        Solution1 solution = new Solution1();
+        Solution001 solution = new Solution001();
         System.out.println(Arrays.toString(solution.twoSum(nums, target)));
     }
 }
