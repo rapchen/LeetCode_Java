@@ -1,8 +1,9 @@
 package problems;
 
 /**
+ * 115. Distinct Subsequences
  * @author Chen Runwen
- * @date 1:17
+ * @time 2019/11/3 1:17
  */
 public class Problem115 {
     public int numDistinct(String s, String t) {

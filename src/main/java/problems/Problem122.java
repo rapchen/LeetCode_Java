@@ -3,7 +3,7 @@ package problems;
 /**
  * 122. Best Time to Buy and Sell Stock II
  * @author Chen Runwen
- * @date 22:00
+ * @time 2019/11/1 22:00
  */
 public class Problem122 {
 
