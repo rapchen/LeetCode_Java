@@ -4,10 +4,11 @@ import java.util.Stack;
 
 /**
  * 32. Longest Valid Parentheses
+ * @difficulty H
  * @author Chen Runwen
- * @date 2019/7/21
+ * @time 2019/7/21
  */
-public class Solution032 {
+public class Problem32 {
 
     /**
      * 这个是最初自己写的
@@ -58,6 +59,6 @@ public class Solution032 {
 
     public static void main(String[] args) {
         String s = ")()())";
-        System.out.println(new Solution032().longestValidParentheses(s));
+        System.out.println(new Problem32().longestValidParentheses(s));
     }
 }

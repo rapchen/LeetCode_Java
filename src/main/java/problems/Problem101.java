@@ -7,10 +7,15 @@ import java.util.Stack;
 /**
  * 101. Symmetric Tree
  * @author Chen Runwen
- * @version 1.0 2019/2/14
+ * @time 2019/2/14
  */
-public class Solution101 {
-    public boolean isSymmetric(TreeNode root) {
+public class Problem101 {
+    /**
+     * 用递归做的
+     * @param root
+     * @return
+     */
+    public boolean isSymmetric1(TreeNode root) {
         if (root == null) {
             return true;
         }
@@ -26,11 +31,10 @@ public class Solution101 {
         }
         return isConversed(p.left, q.right) && isConversed(p.right, q.left);
     }
-}
 
-class Solution101_2 {
     /**
-     * 中根遍历回文不一定对称（{1,2,3,3,null,2,null}）
+     * 用栈写一下
+     * 中根遍历回文的树不一定对称（{1,2,3,3,null,2,null}）
      * 最后采用先根遍历，比较每一节点的左右节点
      * @param root
      * @return
@@ -68,6 +72,6 @@ class Solution101_2 {
 
     public static void main(String[] args) {
         TreeNode root = new TreeNode(new Integer[]{1,2,3,3,null,2,null});
-        System.out.println(new Solution101_2().isSymmetric(root));
+        System.out.println(new Problem101().isSymmetric(root));
     }
 }

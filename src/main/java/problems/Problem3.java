@@ -4,12 +4,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * 3. 无重复字符的最长子串
+ * @difficulty M
  * @author Chen Runwen
- * @version 1.0 2018/3/6
+ * @time 2018/3/6
  */
-
-
-public class Solution003 {
+public class Problem3 {
     public int lengthOfLongestSubstring(String s) {
         int maxLength = 0;
         int beginPos = 0;
@@ -35,7 +35,7 @@ public class Solution003 {
     }
 
     public static void main(String[] args) {
-        Solution003 solution = new Solution003();
+        Problem3 solution = new Problem3();
         System.out.println(solution.lengthOfLongestSubstring("pwwkew"));
     }
 

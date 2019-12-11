@@ -9,7 +9,7 @@ import java.util.Stack;
 /**
  * 二叉树工具类
  * @author Chen Runwen
- * @version 1.0 2019/2/15
+ * @time 2019/2/15
  */
 public class TreeUtil {
     public static List<Integer> preOrderTraversal(TreeNode root) {

@@ -3,10 +3,13 @@ package problems;
 import java.util.*;
 
 /**
+ * 1. 两数之和
+ * @difficulty E
+ * @tags List Hashset
  * @author Chen Runwen
- * @version 1.0 2018/3/4
+ * @time 2018/3/4
  */
-public class Solution001 {
+public class Problem1 {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         int[] result = new int[2];
@@ -25,7 +28,7 @@ public class Solution001 {
     public static void main(String[] args) {
         int[] nums = {3, 2, 4};
         int target = 6;
-        Solution001 solution = new Solution001();
+        Problem1 solution = new Problem1();
         System.out.println(Arrays.toString(solution.twoSum(nums, target)));
     }
 }

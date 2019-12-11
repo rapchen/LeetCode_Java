@@ -1,19 +1,14 @@
 package problems;
 
+import structs.ListNode;
+
 /**
+ * 2. 两数相加
+ * @difficulty M
  * @author Chen Runwen
- * @version 1.0 2018/3/4
+ * @time 2018/3/4
  */
-
-
-//Definition for singly-linked list.
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
-}
-
-class Solution {
+public class Problem2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode p1 = l1;
         ListNode p2 = l2;
@@ -49,10 +44,9 @@ class Solution {
         }
         return l1;
     }
-}
 
-public class Problem002 {
     public static void main(String[] args) {
-
+        int[] ratings = new int[] {1, 2, 2};
+        System.out.println(new Problem135().candy(ratings));
     }
 }
