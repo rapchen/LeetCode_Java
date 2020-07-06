@@ -3,6 +3,8 @@ package problems;
 /**
  * 44. Wildcard Matching
  * @author Chen Runwen
+ * @difficulty H
+ * @status AC 80% 53%
  * @time 2019/11/3 16:08
  */
 public class Problem44 {
