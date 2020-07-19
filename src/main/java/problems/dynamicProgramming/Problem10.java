@@ -1,8 +1,10 @@
-package problems;
+package problems.dynamicProgramming;
 
 /**
  * 10. Regular Expression Matching
  * @author Chen Runwen
+ * @difficulty H
+ * @status AC 100% 41%
  * @time 2019/11/3 1:52
  */
 public class Problem10 {

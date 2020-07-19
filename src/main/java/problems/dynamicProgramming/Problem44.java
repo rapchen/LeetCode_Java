@@ -1,4 +1,4 @@
-package problems;
+package problems.dynamicProgramming;
 
 /**
  * 44. Wildcard Matching
@@ -11,7 +11,7 @@ public class Problem44 {
     /**
      * 最初的做法，简单的DP TODO 似乎有更快的写法
      */
-    public boolean isMatch(String s, String p) {
+    public boolean isMatch1(String s, String p) {
         int len1 = s.length();
         int len2 = p.length();
         if (len2 == 0) {
@@ -70,8 +70,36 @@ public class Problem44 {
         return dp[len1];
     }
 
+    /** 简洁的动规，85% 46% */
+    private boolean isMatch(String s, String p) {
+        char[] ss = s.toCharArray(), ps = p.toCharArray();
+        int len = ss.length, first = 0, k;  // first: ss里第一个true
+        boolean[] dp = new boolean[len + 1];  // 对应s的前i位能否被p的前j位表示
+        dp[0] = true;
+        for (char y : ps) {
+            if (y == '*') {
+                for (int i = first + 1; i <= len; i++) dp[i] = dp[i - 1] || dp[i];
+                if (!dp[len]) return false;
+            } else {
+                if (y == '?') {
+                    if(++first > len) return false;
+                    for (int i = len; i >= first; i--) dp[i] = dp[i - 1];
+                } else {
+                    k = len + 1;
+                    for (int i = len; i >= first + 1; i--) {
+                        dp[i] = dp[i - 1] && ss[i - 1] == y;
+                        if (dp[i]) k = i;
+                    }
+                    if (k > len) return false;
+                    first = k;
+                }
+            }
+        }
+        return dp[len];
+    }
+
     public static void main(String[] args) {
-        String s = "adceb", p = "*a*b";
+        String s = "aa", p = "a";
         System.out.println(new Problem44().isMatch(s, p));
     }
 
