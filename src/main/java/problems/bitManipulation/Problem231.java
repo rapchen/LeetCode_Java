@@ -1,4 +1,4 @@
-package problems;
+package problems.bitManipulation;
 
 /**
  * 231. 2的幂

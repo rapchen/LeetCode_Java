@@ -1,4 +1,4 @@
-package problems;
+package problems.bitManipulation;
 
 /**
  * 260. 只出现一次的数字 III

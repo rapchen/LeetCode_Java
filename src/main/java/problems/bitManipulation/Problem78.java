@@ -1,4 +1,4 @@
-package problems;
+package problems.bitManipulation;
 
 import java.util.ArrayList;
 import java.util.List;
